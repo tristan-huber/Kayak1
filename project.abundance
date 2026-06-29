@@ -8970,7 +8970,7 @@
         },
         {
           "name": "NumRulings",
-          "ioValue": 50
+          "ioValue": 200
         },
         {
           "name": "StartFromEdge",
@@ -9003,7 +9003,7 @@
             },
             {
               "name": "numRulings",
-              "ioValue": 50
+              "ioValue": 200
             },
             {
               "name": "primaryEdgeIndex",
