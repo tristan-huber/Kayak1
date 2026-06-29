@@ -8848,8 +8848,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.48307291666666663,
-      "y": 0.3,
+      "x": 0.52734375,
+      "y": 0.18857142857142858,
       "uniqueID": "id-25770",
       "name": "util.SelectFace",
       "ioValues": [
@@ -9143,6 +9143,117 @@
       "unitsKey": "Unitless",
       "fileTypeVersion": 1,
       "lastReloadedFromGithubAt": 1782772251796
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.46875,
+      "y": 0.4971428571428571,
+      "uniqueID": "id-25837",
+      "name": "util.SelectFace",
+      "ioValues": [
+        {
+          "name": "shape",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "index",
+          "ioValue": 6
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-25833",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-25834",
+          "name": "shape",
+          "type": "geometry"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.24615384615384617,
+          "uniqueID": "id-25835",
+          "name": "index"
+        },
+        {
+          "atomType": "Code",
+          "x": 0.38183593749999994,
+          "y": 0.48750000000000004,
+          "uniqueID": "id-25836",
+          "ioValues": [
+            {
+              "name": "shape",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "faceIndex",
+              "ioValue": 6
+            }
+          ],
+          "interpreterVersion": 1,
+          "code": "\nfunction run(\n  shape: Assembly,\n  faceIndex: number = 0\n) {\n  let result = undefined;\n  shape.onLeafs((leaf) => {\n    if (leaf.is3D()) {\n      const f = leaf.geometry.faces\n      if (f.length > faceIndex && result == undefined) {\n        result = f[faceIndex]\n      } else {\n        faceIndex = faceIndex - f.length\n      }\n      return leaf;\n    }\n  })\n  return result;\n}\n",
+          "compiledCode": "\"use strict\";\nfunction run(shape, faceIndex = 0) {\n    let result = undefined;\n    shape.onLeafs((leaf) => {\n        if (leaf.is3D()) {\n            const f = leaf.geometry.faces;\n            if (f.length > faceIndex && result == undefined) {\n                result = f[faceIndex];\n            }\n            else {\n                faceIndex = faceIndex - f.length;\n            }\n            return leaf;\n        }\n    });\n    return result;\n}\n"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-25834",
+          "ap2ID": "id-25836"
+        },
+        {
+          "ap2Name": "faceIndex",
+          "ap1ID": "id-25835",
+          "ap2ID": "id-25836"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-25836",
+          "ap2ID": "id-25833"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2026-06-29T18:23:39.110Z",
+        "privateRepo": false,
+        "repoName": "util.SelectFace",
+        "dateCreated": "2026-06-11T23:43:58Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/tristan-huber/util.SelectFace/master/README.md?sanitize=true",
+        "yyyy": 2026,
+        "topMoleculeID": "id-1",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/tristan-huber/util.SelectFace",
+        "topics": [
+          "abundance-tool"
+        ],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739778",
+        "ranking": 3,
+        "searchField": "util.selectface tristan-huber gets a face by index from an assembly abundance-tool",
+        "owner": "tristan-huber",
+        "description": "Gets a face by index from an assembly",
+        "contentURL": "https://raw.githubusercontent.com/tristan-huber/util.SelectFace/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/tristan-huber/util.SelectFace/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Unitless",
+      "fileTypeVersion": 1,
+      "lastReloadedFromGithubAt": 1782773129048
     }
   ],
   "allConnectors": [
@@ -9182,6 +9293,11 @@
       "ap2ID": "id-997"
     },
     {
+      "ap2Name": "shape",
+      "ap1ID": "id-14822",
+      "ap2ID": "id-25837"
+    },
+    {
       "ap2Name": "Wires",
       "ap1ID": "id-5492",
       "ap2ID": "id-14822"
@@ -9208,7 +9324,7 @@
     },
     {
       "ap2Name": "Face",
-      "ap1ID": "id-25770",
+      "ap1ID": "id-25837",
       "ap2ID": "id-25790"
     }
   ],
