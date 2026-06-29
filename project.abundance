@@ -8874,11 +8874,6 @@
       "ap2ID": "id-1123"
     },
     {
-      "ap2Name": "Lines",
-      "ap1ID": "id-5492",
-      "ap2ID": "id-21266"
-    },
-    {
       "ap2Name": "Wires",
       "ap1ID": "id-5492",
       "ap2ID": "id-14822"
