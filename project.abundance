@@ -113,8 +113,8 @@
     },
     {
       "atomType": "Code",
-      "x": 0.6731770833333333,
-      "y": 0.7657142857142857,
+      "x": 0.6139322916666666,
+      "y": 0.7599999999999999,
       "uniqueID": "id-26306",
       "ioValues": [
         {
@@ -4056,6 +4056,18 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Import",
+      "x": 0.7415364583333334,
+      "y": 0.5885714285714286,
+      "uniqueID": "id-26774",
+      "fileName": "Canoe.step",
+      "name": "Import",
+      "type": "STEP",
+      "repoOwner": "tristan-huber",
+      "repoName": "Kayak1",
+      "SVGwidth": 10
     }
   ],
   "allConnectors": [
