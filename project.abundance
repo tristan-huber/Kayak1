@@ -4059,12 +4059,24 @@
     },
     {
       "atomType": "Import",
-      "x": 0.7415364583333334,
-      "y": 0.5885714285714286,
+      "x": 0.7337239583333334,
+      "y": 0.1742857142857143,
       "uniqueID": "id-26774",
       "fileName": "Canoe.step",
       "name": "Import",
       "type": "STEP",
+      "repoOwner": "tristan-huber",
+      "repoName": "Kayak1",
+      "SVGwidth": 10
+    },
+    {
+      "atomType": "Import",
+      "x": 0.7506510416666666,
+      "y": 0.6657142857142857,
+      "uniqueID": "id-26778",
+      "fileName": "Hard chine test.stl",
+      "name": "Import",
+      "type": "STL",
       "repoOwner": "tristan-huber",
       "repoName": "Kayak1",
       "SVGwidth": 10
